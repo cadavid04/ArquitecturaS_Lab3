@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 15, 2018 11:48:09 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.udea.persistencia.Clima" table="clima" catalog="arqui" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="dia" type="date">
+            <column name="dia" length="10" not-null="true" />
+        </property>
+        <property name="temperatura" type="int">
+            <column name="temperatura" not-null="true" />
+        </property>
+        <property name="humedad" type="int">
+            <column name="humedad" not-null="true" />
+        </property>
+        <property name="tipoNubosidad" type="string">
+            <column name="tipo_nubosidad" length="15" not-null="true" />
+        </property>
+        <property name="probabilidadprecipitacion" type="double">
+            <column name="probabilidadprecipitacion" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
